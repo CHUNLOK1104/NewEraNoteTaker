@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String inputUsername = edtUsername.getText();
-                String inputPassword = edtUsername.getText();
+                String inputUsername = edtUsername.getText().toString();
+                String inputPassword = edtUsername.getText().toString();
 
                 if (inputUsername.equals(username) && inputPassword.equals(password)) {
-                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "Login Fail", Toast.LENGTH_SHORT).show();
                 }
