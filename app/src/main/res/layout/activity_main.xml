@@ -15,14 +15,17 @@
         android:text="Welcomt to NoteTaker"
         android:textSize="20sp"/>
     <EditText
+        android:id="@+id/edt_username"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Usename" />
     <EditText
+        android:id="@+id/edt_password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Password" />
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Login"/>
