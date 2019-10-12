@@ -17,31 +17,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findView();
+        findViews();
         setListeners();
-    }
 
-    private void findView(){
-        edtUsername = findViewById(R.id.edt_username);
-        edtPassword = findViewById(R.id.edt_password);
-        btnLogin = findViewById(R.id.btn_login);
-    }
-    private void setListeners(){
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String inputUsername = edtUsername.getText().toString();
-                String inputPassword = edtUsername.getText().toString();
+        private void findViews () {
+            edtUsername = findViewById(R.id.edt_username);
+            edtPassword = findViewById(R.id.edt_password);
+            btnLogin = findViewById(R.id.btn_login);
+        }
 
-                if (inputUsername.equals(username) && inputPassword.equals(password)) {
-    //               Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(MainActivity.this,HomeActivity.class);
-                    startActivity(i);
-                    finish();
-                } else {
-                    Toast.makeText(MainActivity.this, "Login Fail", Toast.LENGTH_SHORT).show();
+        private void setListeners() {
+
+            btnLogin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    String inputUsername = edtUsername.getText().toString();
+                    String inputPassword = edtUsername.getText().toString();
+
+                    if (inputUsername.equals(username) && inputPassword.equals(password)) {
+                        //               Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(i);
+                        finish();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Login Fail", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
-    }
-}
+            });
+        }
+
