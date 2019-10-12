@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText edtUsername , edtPassword;
+    private EditText edtUsername , edtPassword ;
     private Button btnLogin;
     private String username = "s", password = "4";
     @Override
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         findViews();
         setListeners();
 
-        private void findViews () {
+        private void findViews() {
             edtUsername = findViewById(R.id.edt_username);
             edtPassword = findViewById(R.id.edt_password);
             btnLogin = findViewById(R.id.btn_login);
